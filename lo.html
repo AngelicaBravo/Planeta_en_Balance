@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Caneca Inteligente</title>
+    <link rel="stylesheet" href="lo.css">
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <h1> Simulador de Caneca Inteligente</h1>
+
+    <p>
+        Simulación de residuos plásticos generados durante el
+        <strong>descanso escolar</strong>.
+    </p>
+
+    <div class="panel">
+
+        <h2>Datos del descanso</h2>
+
+        <div class="datos">
+
+            <div class="dato">
+                <label>Estudiantes</label>
+                <input type="number" id="estudiantes" value="700" min="1">
+            </div>
+
+            <div class="dato">
+                <label>Tiempo del descanso (min)</label>
+                <input type="number" id="tiempo" value="30" min="1">
+            </div>
+
+            <div class="dato">
+                <label>Empaques por estudiante</label>
+                <input type="number" id="empaques" value="1" min="0" step="0.1">
+            </div>
+
+            <div class="dato">
+                <label>Peso por empaque (kg)</label>
+                <input type="number" id="pesoEmpaque" value="0.04" min="0.001" step="0.01">
+            </div>
+
+            <div class="dato">
+                <label>Capacidad caneca (kg)</label>
+                <input type="number" id="capacidad" value="30" min="1">
+            </div>
+
+        </div>
+
+        <br>
+
+        <button onclick="iniciar()"> Iniciar</button>
+        <button onclick="pausar()"> Pausar</button>
+        <button onclick="reiniciar()"> Reiniciar</button>
+
+    </div>
+
+
+    <div class="panel">
+
+        <h2>Caneca durante el descanso</h2>
+
+        <div class="tapa"></div>
+
+        <div class="caneca">
+            <div class="basura" id="basura"></div>
+        </div>
+
+        <div class="porcentaje" id="porcentaje">
+            0%
+        </div>
+
+        <div id="mensaje">
+            Caneca disponible
+        </div>
+
+    </div>
+
+
+    <div class="panel">
+
+        <h2>Información de la simulación</h2>
+
+        <div class="estadisticas">
+
+            <div class="tarjeta">
+                Tiempo
+                <strong id="tiempoActual">0 min</strong>
+            </div>
+
+            <div class="tarjeta">
+                Estudiantes
+                <strong id="mostrarEstudiantes">700</strong>
+            </div>
+
+            <div class="tarjeta">
+                Empaques
+                <strong id="totalEmpaques">0</strong>
+            </div>
+
+            <div class="tarjeta">
+                Peso
+                <strong id="pesoActual">0 kg</strong>
+            </div>
+
+        </div>
+
+        <div class="barra-tiempo">
+            <div id="progreso"></div>
+        </div>
+
+    </div>
+
+
+    <div class="panel">
+
+        <h2>Datos de referencia</h2>
+
+        <table>
+
+            <tr>
+                <th>Tiempo (min)</th>
+                <th>Peso (kg)</th>
+            </tr>
+
+            <tr>
+                <td>25</td>
+                <td>1,4</td>
+            </tr>
+
+            <tr>
+                <td>20</td>
+                <td>1,2</td>
+            </tr>
+
+            <tr>
+                <td>195</td>
+                <td>7</td>
+            </tr>
+
+            <tr>
+                <td>15</td>
+                <td>2</td>
+            </tr>
+
+            <tr>
+                <td>23</td>
+                <td>2,8</td>
+            </tr>
+
+            <tr>
+                <td>50</td>
+                <td>6,4</td>
+            </tr>
+
+            <tr>
+                <td>15</td>
+                <td>3</td>
+            </tr>
+
+            <tr>
+                <td>30</td>
+                <td>28</td>
+            </tr>
+
+            <tr>
+                <td>20</td>
+                <td>9,2</td>
+            </tr>
+
+            <tr>
+                <td>30</td>
+                <td>1,8</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="lo.java"></script>
+
+</body>
+</html>
